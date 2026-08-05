@@ -76,6 +76,13 @@ a { color: inherit; text-decoration: none; }
 .project-link span { color: var(--acid); }
 .tone-sand { background: #8b7a61; } .tone-forest { background: #384b3d; } .tone-clay { background: #85594b; } .tone-ink { background: #333d46; } .tone-plum { background: #5f424e; }
 
+.full-archive { margin-top: 13vw; padding: 42px 0 0; border-top: 1px solid rgba(255,255,255,.2); display: grid; grid-template-columns: 1fr auto; gap: 6vw; align-items: end; }
+.full-archive h3 { margin: 28px 0 18px; font-size: clamp(2.8rem,5vw,6rem); font-weight: 480; line-height: .92; letter-spacing: -.065em; }
+.full-archive h3 em { font-family: var(--serif); font-weight: 400; }
+.full-archive div > p:last-child { max-width: 570px; margin: 0; color: #aeb0a5; font-size: .94rem; line-height: 1.65; }
+.full-archive > a { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-width: 240px; padding: 17px 22px; border-radius: 999px; background: var(--acid); color: var(--ink); font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; transition: transform 180ms ease, box-shadow 180ms ease; }
+.full-archive > a:hover, .full-archive > a:focus-visible { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(217,255,67,.16); }
+
 .services { padding: 10vw 4vw; }
 .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; margin-top: 7vw; }
 .services h2 { margin: 0; max-width: 620px; font-size: clamp(3rem,5vw,6rem); font-weight: 480; letter-spacing: -.065em; line-height: .92; }
@@ -106,6 +113,8 @@ footer { background: #151613; color: #f1eee7; padding: 9vw 4vw 32px; }
   .project-reverse .project-media, .project-reverse .project-copy { order: initial; }
   .project-media { min-height: 72vw; }
   .project-copy { max-width: 680px; }
+  .full-archive { grid-template-columns: 1fr; align-items: start; }
+  .full-archive > a { justify-self: start; }
   .services-grid { grid-template-columns: 1fr; gap: 11vw; }
 }
 
@@ -131,6 +140,9 @@ footer { background: #151613; color: #f1eee7; padding: 9vw 4vw 32px; }
   .project-list { gap: 110px; }
   .project-media { min-height: 118vw; }
   .project h3 { font-size: 3.5rem; }
+  .full-archive { margin-top: 110px; padding-top: 30px; gap: 34px; }
+  .full-archive h3 { font-size: 3.35rem; }
+  .full-archive > a { width: 100%; }
   .services { padding-top: 90px; padding-bottom: 100px; }
   .services-grid { margin-top: 60px; }
   .services h2 { font-size: 3.35rem; }

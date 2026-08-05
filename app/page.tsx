@@ -93,6 +93,16 @@ export default function Home() {
             </article>
           ))}
         </div>
+        <div className="full-archive">
+          <div>
+            <p className="section-label">Full archive</p>
+            <h3>Muốn xem <em>toàn bộ?</em></h3>
+            <p>Khám phá đầy đủ các bộ phim, thử nghiệm hình ảnh và những sản phẩm khác của Minh Hiếu trên Google Drive.</p>
+          </div>
+          <a href="https://drive.google.com/drive/folders/1UpOSRd8zaFJK1eHJ89qQ6l6QJAmf0LyA?usp=drive_link" target="_blank" rel="noopener noreferrer">
+            Xem toàn bộ sản phẩm <Arrow />
+          </a>
+        </div>
       </section>
 
       <section className="services" aria-labelledby="services-title">
