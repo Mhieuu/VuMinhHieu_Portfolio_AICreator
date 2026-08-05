@@ -11,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host");
   const protocol = requestHeaders.get("x-forwarded-proto") ?? "https";
   const baseUrl = host ? `${protocol}://${host}` : "https://tao-visual-studio.rivascarr714539.chatgpt.site";
-  const imageUrl = `${baseUrl}/og.png`;
+  const imageUrl = `${baseUrl}/og-v2.png`;
 
   return {
     title: "Vũ Minh Hiếu — AI Creator",
