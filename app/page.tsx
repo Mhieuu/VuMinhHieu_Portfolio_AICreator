@@ -39,8 +39,10 @@ export default function Home() {
 
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-kicker reveal-up"><span>Independent AI Creator</span><span>Architecture · Lifestyle · Motion</span></div>
-        <h1 id="hero-title" className="reveal-up delay-1">Vũ Minh Hiếu<br /><em>AI Creator.</em></h1>
-        <p className="hero-intro reveal-up delay-1">Tạo nên những thế giới thị giác giàu cảm xúc bằng AI, chuyển động và tư duy điện ảnh.</p>
+        <div className="hero-copy">
+          <h1 id="hero-title" className="reveal-up delay-1">Vũ Minh Hiếu<br /><em>AI Creator.</em></h1>
+          <p className="hero-intro reveal-up delay-1">Tạo nên những thế giới thị giác giàu cảm xúc bằng AI, chuyển động và tư duy điện ảnh.</p>
+        </div>
         <div className="hero-media reveal-up delay-2">
           <img src={withBasePath("/media/maia.jpg")} alt="Khung cảnh nghỉ dưỡng do Vũ Minh Hiếu thực hiện" />
           <video autoPlay muted loop playsInline preload="metadata" poster={withBasePath("/media/maia.jpg")} aria-hidden="true"><source src={withBasePath("/media/maia.mp4")} type="video/mp4" /></video>
