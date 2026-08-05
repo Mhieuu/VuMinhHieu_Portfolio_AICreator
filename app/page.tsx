@@ -21,6 +21,9 @@ const showcase = [
   { title: "An Avenue", project: "An Maison", slug: "an-avenue" },
 ];
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const withBasePath = (path: string) => `${basePath}${path}`;
+
 function Arrow() { return <span aria-hidden="true">↗</span>; }
 
 export default function Home() {
@@ -39,8 +42,8 @@ export default function Home() {
         <h1 id="hero-title" className="reveal-up delay-1">Vũ Minh Hiếu<br /><em>AI Creator.</em></h1>
         <p className="hero-intro reveal-up delay-1">Tạo nên những thế giới thị giác giàu cảm xúc bằng AI, chuyển động và tư duy điện ảnh.</p>
         <div className="hero-media reveal-up delay-2">
-          <img src="/media/maia.jpg" alt="Khung cảnh nghỉ dưỡng do Vũ Minh Hiếu thực hiện" />
-          <video autoPlay muted loop playsInline preload="metadata" poster="/media/maia.jpg" aria-hidden="true"><source src="/media/maia.mp4" type="video/mp4" /></video>
+          <img src={withBasePath("/media/maia.jpg")} alt="Khung cảnh nghỉ dưỡng do Vũ Minh Hiếu thực hiện" />
+          <video autoPlay muted loop playsInline preload="metadata" poster={withBasePath("/media/maia.jpg")} aria-hidden="true"><source src={withBasePath("/media/maia.mp4")} type="video/mp4" /></video>
           <div className="hero-media-label"><span>Featured visual</span><strong>Maia Hồ Tràm</strong></div>
           <div className="scroll-cue" aria-hidden="true">Khám phá portfolio <span>↓</span></div>
         </div>
@@ -64,8 +67,8 @@ export default function Home() {
         <div className="feed-grid">
           {showcase.map((item, index) => (
             <article className={`feed-card feed-card-${(index % 6) + 1}`} key={item.slug}>
-              <img src={`/media/showcase/${item.slug}.jpg`} alt={`${item.title} — ${item.project}`} loading="lazy" />
-              <video autoPlay muted loop playsInline preload="none" poster={`/media/showcase/${item.slug}.jpg`} aria-hidden="true"><source src={`/media/showcase/${item.slug}.mp4`} type="video/mp4" /></video>
+              <img src={withBasePath(`/media/showcase/${item.slug}.jpg`)} alt={`${item.title} — ${item.project}`} loading="lazy" />
+              <video autoPlay muted loop playsInline preload="none" poster={withBasePath(`/media/showcase/${item.slug}.jpg`)} aria-hidden="true"><source src={withBasePath(`/media/showcase/${item.slug}.mp4`)} type="video/mp4" /></video>
               <div className="feed-caption"><span>{String(index + 1).padStart(2, "0")}</span><div><strong>{item.title}</strong><small>{item.project}</small></div></div>
             </article>
           ))}
@@ -81,8 +84,8 @@ export default function Home() {
           {projects.map((project, index) => (
             <article className={`project ${index % 2 ? "project-reverse" : ""}`} key={project.title}>
               <div className={`project-media tone-${project.tone}`}>
-                <img src={project.poster} alt={`Hình ảnh dự án ${project.title}`} loading="lazy" />
-                <video autoPlay muted loop playsInline preload="none" poster={project.poster} aria-hidden="true"><source src={project.video} type="video/mp4" /></video>
+                <img src={withBasePath(project.poster)} alt={`Hình ảnh dự án ${project.title}`} loading="lazy" />
+                <video autoPlay muted loop playsInline preload="none" poster={withBasePath(project.poster)} aria-hidden="true"><source src={withBasePath(project.video)} type="video/mp4" /></video>
                 <span className="project-index">{project.number}</span>
               </div>
               <div className="project-copy">
