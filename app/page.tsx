@@ -37,15 +37,13 @@ export default function Home() {
         </div>
         <div className="hero-collage" aria-label="Hình ảnh nổi bật từ portfolio">
           <div className="hero-frame hero-frame-main"><img src={asset("/media/maia.jpg")} alt="Khung cảnh dự án Maia Hồ Tràm" /></div>
-          <div className="hero-frame hero-frame-strip"><img src={asset("/media/showcase/noble-interior.jpg")} alt="Không gian nội thất Noble Palace" /></div>
-          <div className="hero-frame hero-frame-small"><img src={asset("/media/showcase/maison-04.jpg")} alt="Khung hình Maison Stories" /></div>
-          <span className="acid-block acid-block-one" aria-hidden="true" /><span className="acid-block acid-block-two" aria-hidden="true" /><Scribble className="hero-scribble" />
+          <div className="hero-image-caption"><span>Featured frame</span><strong>Maia Hồ Tràm</strong></div>
         </div>
         <div className="hero-bottom"><span>Selected films</span><span>Only works over 30 seconds</span><a href="#index">Scroll to index ↓</a></div>
       </section>
 
       <section className="index-panel" id="index" aria-labelledby="index-title">
-        <div className="index-image"><img src={asset("/media/showcase/andora-cgi.jpg")} alt="Toàn cảnh kiến trúc dự án Andora City" /><div className="index-stamp"><h2 id="index-title">INDEX</h2><Scribble /></div><Barcode /></div>
+        <div className="index-image"><img src={asset("/media/showcase/andora-cgi.jpg")} alt="Toàn cảnh kiến trúc dự án Andora City" /><div className="index-stamp"><h2 id="index-title">INDEX</h2></div></div>
         <div className="index-grid">
           <a href="#about"><span>01.</span><strong>About me</strong><small>Approach &amp; practice</small></a>
           <a href="#work"><span>02.</span><strong>Selected films</strong><small>8 completed works</small></a>
@@ -56,11 +54,13 @@ export default function Home() {
 
       <section className="about" id="about" aria-labelledby="about-title">
         <div className="section-topline"><span>01 / About</span><Barcode light /><span>Creator profile</span></div>
-        <div className="about-copy"><p className="eyebrow">Storytelling beyond the prompt</p><h2 id="about-title">TÔI TẠO RA<br />NHỮNG KHUNG HÌNH<br /><span>CÓ CẢM GIÁC.</span></h2><p className="about-body">Tôi là Vũ Minh Hiếu — AI Creator làm việc đa lĩnh vực, từ thương hiệu, sản phẩm và thời trang đến kiến trúc, hospitality và văn hóa thị giác. Tôi kết hợp AI với visual direction, compositing và motion để mỗi ý tưởng không chỉ được nhìn thấy, mà còn được cảm nhận.</p></div>
-        <div className="about-visuals">
-          <figure className="about-image about-image-large"><img src={asset("/media/showcase/noble-park.jpg")} alt="Khung cảnh điện ảnh trong dự án Noble Palace" /></figure>
-          <figure className="about-image about-image-small"><img src={asset("/media/showcase/maia-coast.jpg")} alt="Không gian ven biển Maia Hồ Tràm" /></figure>
-          <div className="about-note"><span>08</span><p>Phim<br />được chọn</p></div><Scribble className="about-scribble" />
+        <div className="about-layout">
+          <div className="about-copy"><p className="eyebrow">Storytelling beyond the prompt</p><h2 id="about-title">TÔI TẠO RA<br />NHỮNG KHUNG HÌNH<br /><span>CÓ CẢM GIÁC.</span></h2><p className="about-body">Tôi là Vũ Minh Hiếu — AI Creator làm việc đa lĩnh vực, từ thương hiệu, sản phẩm và thời trang đến kiến trúc, hospitality và văn hóa thị giác. Tôi kết hợp AI với visual direction, compositing và motion để mỗi ý tưởng không chỉ được nhìn thấy, mà còn được cảm nhận.</p></div>
+          <div className="about-visuals">
+            <figure className="about-image about-image-large"><img src={asset("/media/showcase/noble-park.jpg")} alt="Khung cảnh điện ảnh trong dự án Noble Palace" /></figure>
+            <figure className="about-image about-image-small"><img src={asset("/media/showcase/maia-coast.jpg")} alt="Không gian ven biển Maia Hồ Tràm" /></figure>
+            <div className="about-note"><span>08</span><p>Phim<br />được chọn</p></div>
+          </div>
         </div>
         <div className="about-stats"><div><strong>08</strong><span>Selected films</span></div><div><strong>30s+</strong><span>Minimum duration</span></div><div><strong>∞</strong><span>Visual possibilities</span></div></div>
       </section>
