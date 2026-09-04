@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <main id="top">
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Vũ Minh Hiếu — về đầu trang">VMH<span>®</span></a>
+        <a className="wordmark" href="#top" aria-label="Vũ Minh Hiếu — về đầu trang"><img src={asset("/logo-vmh.png")} alt="Logo Vũ Minh Hiếu" width="1536" height="1024" /></a>
         <nav aria-label="Điều hướng chính"><a href="#about">About</a><a href="#work">Films</a><a href="#contact">Contact</a></nav>
         <a className="header-contact" href="mailto:?subject=Trao đổi dự án cùng Vũ Minh Hiếu">Let&apos;s talk <Arrow /></a>
       </header>
