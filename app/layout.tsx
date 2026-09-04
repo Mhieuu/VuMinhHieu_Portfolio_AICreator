@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   icons: { icon: `${basePath}/favicon.svg`, shortcut: `${basePath}/favicon.svg` },
   openGraph: {
     title: "Vũ Minh Hiếu — AI Creator",
-    description: "Cinematic AI visuals for architecture, hospitality and lifestyle.",
+    description: "Cinematic AI visuals across brand, product, fashion, architecture and culture.",
     type: "website",
     images: [{ url: socialImage, width: 1732, height: 908, alt: "Vũ Minh Hiếu — AI Creator" }],
   },
