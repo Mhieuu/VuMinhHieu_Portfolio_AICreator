@@ -69,7 +69,7 @@ export default function Home() {
 
       <section className="about" id="about" aria-labelledby="about-title">
         <div className="section-topline"><span>01 / About</span><Barcode light /><span>Creator profile</span></div>
-        <div className="about-copy"><p className="eyebrow">Storytelling beyond the prompt</p><h2 id="about-title">TÔI TẠO RA<br />NHỮNG KHUNG HÌNH<br /><span>CÓ CẢM GIÁC.</span></h2><p className="about-body">Tôi là Vũ Minh Hiếu — AI Creator tập trung vào bất động sản, hospitality và lifestyle. Tôi kết hợp công cụ AI với visual direction, compositing và motion để một ý tưởng không chỉ được nhìn thấy, mà còn được cảm nhận.</p></div>
+        <div className="about-copy"><p className="eyebrow">Storytelling beyond the prompt</p><h2 id="about-title">TÔI TẠO RA<br />NHỮNG KHUNG HÌNH<br /><span>CÓ CẢM GIÁC.</span></h2><p className="about-body">Tôi là Vũ Minh Hiếu — AI Creator làm việc đa lĩnh vực, từ thương hiệu, sản phẩm và thời trang đến kiến trúc, hospitality và văn hóa thị giác. Tôi kết hợp AI với visual direction, compositing và motion để mỗi ý tưởng không chỉ được nhìn thấy, mà còn được cảm nhận.</p></div>
         <div className="about-visuals">
           <figure className="about-image about-image-large"><img src={asset("/media/showcase/noble-park.jpg")} alt="Khung cảnh điện ảnh trong dự án Noble Palace" /></figure>
           <figure className="about-image about-image-small"><img src={asset("/media/showcase/maia-coast.jpg")} alt="Không gian ven biển Maia Hồ Tràm" /></figure>
