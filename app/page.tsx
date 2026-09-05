@@ -11,6 +11,7 @@ const films = [
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const asset = (path: string) => `${basePath}${path}`;
+const projectArchiveUrl = "https://drive.google.com/drive/folders/1UpOSRd8zaFJK1eHJ89qQ6l6QJAmf0LyA?usp=drive_link";
 
 function Arrow() { return <span aria-hidden="true">↗</span>; }
 function Barcode({ light = false }: { light?: boolean }) { return <span className={`barcode${light ? " barcode-light" : ""}`} aria-hidden="true" />; }
@@ -23,7 +24,7 @@ export default function Home() {
     <main id="top">
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Vũ Minh Hiếu — về đầu trang"><img src={asset("/logo-vmh.png")} alt="Logo Vũ Minh Hiếu" width="1536" height="1024" /></a>
-        <nav aria-label="Điều hướng chính"><a href="#about">About</a><a href="#work">Films</a><a href="#contact">Contact</a></nav>
+        <nav aria-label="Điều hướng chính"><a href="#about">About</a><a href="#work">Films</a><a href={projectArchiveUrl} target="_blank" rel="noreferrer">Archive ↗</a><a href="#contact">Contact</a></nav>
         <a className="header-contact" href="mailto:?subject=Trao đổi dự án cùng Vũ Minh Hiếu">Let&apos;s talk <Arrow /></a>
       </header>
 
@@ -84,6 +85,10 @@ export default function Home() {
               </div>
             </article>
           ))}
+        </div>
+        <div className="film-archive">
+          <div><span>Full project archive</span><p>Khám phá toàn bộ dự án, thử nghiệm hình ảnh và các phiên bản sản xuất trên Google Drive.</p></div>
+          <a href={projectArchiveUrl} target="_blank" rel="noreferrer">Xem toàn bộ dự án <Arrow /></a>
         </div>
       </section>
 

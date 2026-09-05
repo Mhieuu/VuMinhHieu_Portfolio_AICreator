@@ -158,6 +158,11 @@ img, video { display: block; }
 .film-caption > div:last-child { display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between; gap: 10px; text-align: right; }
 .film-caption span { color: #6d6e66; font-size: .7rem; }
 .film-caption strong { font-family: var(--font-geist-mono), monospace; font-size: .82rem; font-weight: 500; letter-spacing: .08em; }
+.film-archive { margin-top: clamp(72px, 9vw, 140px); padding: clamp(24px, 3vw, 42px); display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 40px; border: 1px solid var(--line-dark); background: #deded8; }
+.film-archive span { color: #65665f; font-family: var(--font-geist-mono), monospace; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+.film-archive p { max-width: 650px; margin: 14px 0 0; font-size: clamp(1rem, 1.25vw, 1.2rem); line-height: 1.55; }
+.film-archive a { display: inline-flex; align-items: center; justify-content: space-between; gap: 26px; min-width: 260px; padding: 16px 18px; background: var(--acid); color: var(--black); font-family: var(--font-geist-mono), monospace; font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; transition: transform 180ms ease, box-shadow 180ms ease; }
+.film-archive a:hover, .film-archive a:focus-visible { transform: translate(4px, -4px); box-shadow: -5px 5px 0 var(--black); }
 
 .services { padding: 8vw var(--gutter) 9vw; background: var(--paper); color: var(--black); border-top: 1px solid var(--line-dark); }
 .services .section-topline { color: #676861; border-color: var(--line-dark); }
@@ -269,6 +274,8 @@ footer h2 span { margin-left: .45ch; }
   .film-caption { gap: 14px; padding-top: 14px; }
   .film-caption h3, .film-card-1 .film-caption h3, .film-card-8 .film-caption h3 { font-size: clamp(1.42rem, 7vw, 2rem); }
   .film-caption span { display: none; }
+  .film-archive { grid-template-columns: 1fr; align-items: stretch; gap: 28px; }
+  .film-archive a { min-width: 0; }
   .frames { padding-left: 14px; padding-right: 14px; }
   .frames-heading { padding: 0 6px; }
   .frame-card figcaption { inset: auto 10px 10px; }
