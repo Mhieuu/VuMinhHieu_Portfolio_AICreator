@@ -12,6 +12,8 @@ const films = [
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const asset = (path: string) => `${basePath}${path}`;
 const projectArchiveUrl = "https://drive.google.com/drive/folders/1UpOSRd8zaFJK1eHJ89qQ6l6QJAmf0LyA?usp=drive_link";
+const contactEmail = "hvuminh998@gmail.com";
+const contactPhone = "+84337007704";
 
 function Arrow() { return <span aria-hidden="true">↗</span>; }
 function Barcode({ light = false }: { light?: boolean }) { return <span className={`barcode${light ? " barcode-light" : ""}`} aria-hidden="true" />; }
@@ -25,7 +27,7 @@ export default function Home() {
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Vũ Minh Hiếu — về đầu trang"><img src={asset("/logo-vmh.png")} alt="Logo Vũ Minh Hiếu" width="1536" height="1024" /></a>
         <nav aria-label="Điều hướng chính"><a href="#about">About</a><a href="#work">Films</a><a href={projectArchiveUrl} target="_blank" rel="noreferrer">Archive ↗</a><a href="#contact">Contact</a></nav>
-        <a className="header-contact" href="mailto:?subject=Trao đổi dự án cùng Vũ Minh Hiếu">Let&apos;s talk <Arrow /></a>
+        <a className="header-contact" href={`mailto:${contactEmail}?subject=Trao đổi dự án cùng Vũ Minh Hiếu`}>Let&apos;s talk <Arrow /></a>
       </header>
 
       <section className="hero" aria-labelledby="hero-title">
@@ -97,7 +99,21 @@ export default function Home() {
         <div className="services-layout"><div><p className="eyebrow">From idea to final frame</p><h2 id="services-title">MỘT CREATOR.<br /><span>TRỌN HÀNH TRÌNH.</span></h2></div><ol><li><span>01</span><strong>AI Visual Development</strong><small>Concept · Look development</small></li><li><span>02</span><strong>Creative Direction</strong><small>Story · Art direction</small></li><li><span>03</span><strong>Image, Film &amp; Motion</strong><small>Production · Animation</small></li><li><span>04</span><strong>Compositing &amp; Finishing</strong><small>Polish · Delivery</small></li></ol></div>
       </section>
 
-      <footer id="contact"><div className="footer-rail" aria-hidden="true">PORTFOLIO</div><div className="footer-content"><p>04 / Start a project</p><h2>LET&apos;S MAKE<br /><span>SOMETHING</span><br />UNEXPECTED.</h2><a href="mailto:?subject=Trao đổi dự án cùng Vũ Minh Hiếu">Gửi brief cho Hiếu <Arrow /></a><div className="footer-meta"><span>Vũ Minh Hiếu · AI Creator</span><Barcode light /><span>Vietnam · 2026</span></div></div></footer>
+      <footer id="contact">
+        <div className="footer-rail" aria-hidden="true">PORTFOLIO</div>
+        <div className="footer-content">
+          <p>04 / Start a project</p>
+          <h2>LET&apos;S MAKE<br /><span>SOMETHING</span><br />UNEXPECTED.</h2>
+          <div className="footer-contact">
+            <a className="footer-cta" href={`mailto:${contactEmail}?subject=Trao đổi dự án cùng Vũ Minh Hiếu`}>Gửi brief cho Hiếu <Arrow /></a>
+            <div className="contact-details" aria-label="Thông tin liên hệ">
+              <a href={`tel:${contactPhone}`}><span>Phone</span><strong>0337 007 704</strong></a>
+              <a href={`mailto:${contactEmail}`}><span>Email</span><strong>{contactEmail}</strong></a>
+            </div>
+          </div>
+          <div className="footer-meta"><span>Vũ Minh Hiếu · AI Creator</span><Barcode light /><span>Vietnam · 2026</span></div>
+        </div>
+      </footer>
     </main>
   );
 }
