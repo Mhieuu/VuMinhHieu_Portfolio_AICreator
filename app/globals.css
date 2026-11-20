@@ -146,9 +146,14 @@ img, video, iframe { display: block; max-width: 100%; }
 .films-intro > p { margin: 0; font-size: 1rem; line-height: 1.65; }
 .film-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(48px, 6vw, 92px) 16px; }
 .film-card { grid-column: span 6; min-width: 0; }
-.film-card-1, .film-card-8 { grid-column: 1 / -1; }
+.film-card-1 { grid-column: 1 / -1; }
 .film-card-2, .film-card-5, .film-card-6 { grid-column: span 7; }
 .film-card-3, .film-card-4, .film-card-7 { grid-column: span 5; }
+.film-card-8 { grid-column: 1 / -1; }
+.film-card-9 { grid-column: 1 / -1; }
+/* vertical (9:16) sources sit in narrow columns so the portrait frame reads as intentional */
+.film-card-vertical { grid-column: span 3; }
+.film-card-vertical .film-player { aspect-ratio: 9 / 16; }
 .film-player { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #090a09; box-shadow: 0 18px 44px rgba(17,18,16,.14); }
 .film-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #090a09; }
 .film-number { position: absolute; z-index: 2; top: 14px; left: 14px; display: grid; place-items: center; width: 42px; aspect-ratio: 1; border-radius: 50%; background: var(--acid); color: var(--black); font-family: var(--font-geist-mono), monospace; font-size: .65rem; pointer-events: none; box-shadow: 0 5px 18px rgba(0,0,0,.24); }
@@ -157,6 +162,9 @@ img, video, iframe { display: block; max-width: 100%; }
 .film-caption h3 { margin: 0; font-family: var(--display); font-size: clamp(1.55rem, 2.25vw, 2.9rem); font-weight: 650; line-height: 1.02; letter-spacing: -.055em; }
 .film-card-1 .film-caption h3, .film-card-8 .film-caption h3 { font-size: clamp(2.1rem, 3.5vw, 4.5rem); }
 .film-caption > div:last-child { display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between; gap: 10px; text-align: right; }
+.film-card-vertical .film-caption { display: block; }
+.film-card-vertical .film-caption h3 { font-size: clamp(1.05rem, 1.5vw, 1.6rem); }
+.film-card-vertical .film-caption > div:last-child { flex-direction: row; align-items: baseline; justify-content: flex-start; gap: 14px; margin-top: 12px; text-align: left; }
 .film-caption span { color: #6d6e66; font-size: .7rem; }
 .film-caption strong { font-family: var(--font-geist-mono), monospace; font-size: .82rem; font-weight: 500; letter-spacing: .08em; }
 .film-archive { margin-top: clamp(72px, 9vw, 140px); padding: clamp(24px, 3vw, 42px); display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 40px; border: 1px solid var(--line-dark); background: #deded8; }
@@ -201,6 +209,7 @@ footer h2 span { margin-left: .45ch; }
   .project { grid-template-columns: minmax(0, 6fr) minmax(260px, 4fr); }
   .project:nth-child(even) { grid-template-columns: minmax(260px, 4fr) minmax(0, 6fr); }
   .services-layout { grid-template-columns: 1fr; }
+  .film-card-vertical { grid-column: span 4; }
 }
 
 @media (max-width: 780px) {
@@ -246,6 +255,13 @@ footer h2 span { margin-left: .45ch; }
   .film-card { margin-top: 66px; }
   .film-card:first-child { margin-top: 0; }
   .film-caption { grid-template-columns: minmax(0, 1fr) auto; }
+  /* the two vertical films share one row: pull them into a 2-column grid */
+  .film-grid:has(.film-card-vertical) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 14px; align-items: start; }
+  .film-grid:has(.film-card-vertical) .film-card { grid-column: 1 / -1; margin-top: 66px; }
+  .film-grid:has(.film-card-vertical) .film-card:first-child { margin-top: 0; }
+  .film-grid:has(.film-card-vertical) .film-card-vertical { grid-column: auto; margin-top: 66px; }
+  .film-card-vertical .film-caption { display: block; }
+  .film-card-vertical .film-caption h3 { font-size: clamp(1rem, 4.4vw, 1.35rem); }
   .project-list { gap: 100px; }
   .project, .project:nth-child(even) { display: flex; flex-direction: column; gap: 34px; align-items: stretch; }
   .project:nth-child(even) .project-media, .project:nth-child(even) .project-copy { order: initial; }
